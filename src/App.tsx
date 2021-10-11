@@ -1,6 +1,6 @@
 import {Layout, Menu, Breadcrumb} from 'antd';
 import {HomeOutlined} from '@ant-design/icons';
-import Registration from "./Registration";
+import Registration from "./Registration/";
 
 const {Header, Content, Sider} = Layout;
 
