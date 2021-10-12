@@ -41,7 +41,9 @@ const Registration = () => {
             </Form.Item>
 
             <Form.Item name="birthday" label="Date of birth" rules={rules.birthday}>
-                <DatePicker disabledDate={current => current && current > moment().endOf('day')}/>
+                <DatePicker
+                    disabledDate={current => current && current > moment().endOf('day')}
+                    format="DD/MM/yyyy"/>
             </Form.Item>
 
             <Form.Item {...tailFormItemLayout}>
