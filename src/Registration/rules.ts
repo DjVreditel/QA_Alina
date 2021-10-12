@@ -36,5 +36,7 @@ export const rules = {
     email: [
         {type: 'email', message: 'Wrong e-mail!!!'},
         {required: true, message: 'Please input your E-mail!'},
-    ]
+    ],
+
+    birthday: [{required: true, message: 'Please input your Date of birth!'},]
 } as Record<string, Rule[]>
