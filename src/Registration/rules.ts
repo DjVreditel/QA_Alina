@@ -17,7 +17,7 @@ export const rules = {
 
     password: [
         {required: true, message: 'Please input your password!'},
-        {min: 6, max: 6, message: messages.password},
+        {min: 6, max: 11, message: messages.password},
         {pattern: patterns.lettersAndNumbers, message: messages.password}
     ],
 
