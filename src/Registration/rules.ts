@@ -12,7 +12,7 @@ const messages = {
 export const rules = {
     login: [
         {required: true, message: 'Please input your login!', whitespace: true},
-        {min: 3, max: 20, message: messages.login},
+        {min: 5, max: 15, message: messages.login},
         {pattern: patterns.lettersAndNumbers, message: messages.login}],
 
     password: [
