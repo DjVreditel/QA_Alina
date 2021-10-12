@@ -1,4 +1,4 @@
-#QA_Alina
+# QA_Alina
 
 **Frontend** based on [**React**](https://github.com/facebook/react/)
 
