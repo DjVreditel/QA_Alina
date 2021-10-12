@@ -1,7 +1,7 @@
 import {Rule} from "rc-field-form/lib/interface";
 
 const patterns = {
-    letters: /^[a-zA-Z]+$/
+    lettersAndNumbers: /^[A-Za-z0-9]+$/
 }
 
 const messages = {
@@ -13,12 +13,12 @@ export const rules = {
     login: [
         {required: true, message: 'Please input your login!', whitespace: true},
         {min: 3, max: 20, message: messages.login},
-        {pattern: patterns.letters, message: messages.login}],
+        {pattern: patterns.lettersAndNumbers, message: messages.login}],
 
     password: [
         {required: true, message: 'Please input your password!'},
         {min: 6, max: 6, message: messages.password},
-        {pattern: patterns.letters, message: messages.password}
+        {pattern: patterns.lettersAndNumbers, message: messages.password}
     ],
 
     confirmPassword: [
