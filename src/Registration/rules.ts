@@ -4,8 +4,8 @@ export const rules = {
     login: [
         {required: true, message: 'Please input your login!', whitespace: true},
         {
-            pattern: /^[A-Za-z0-9]{5,15}$/,
-            message: 'Login must contain Latin letters and prime numbers, 5 to 15 characters'
+            pattern: /^[A-Za-z0-9]{4,15}$/,
+            message: 'Login must contain Latin letters and prime numbers, 4 to 15 characters'
         }
     ],
 
