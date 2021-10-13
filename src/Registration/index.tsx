@@ -42,7 +42,8 @@ const Registration = () => {
 
             <Form.Item name="birthday" label="Date of birth" rules={rules.birthday}>
                 <DatePicker
-                    disabledDate={current => current && current > moment().endOf('day')}
+                    disabledDate={current => current &&
+                        (current > moment().endOf('day') || current < moment('1970'))}
                     format="DD/MM/yyyy"/>
             </Form.Item>
 
