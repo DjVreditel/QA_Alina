@@ -1,34 +1,28 @@
 import {Rule} from "rc-field-form/lib/interface";
 
-const patterns = {
-    lettersAndNumbers: /^[A-Za-z0-9]+$/
-}
-
-const messages = {
-    login: 'Login must contain Latin letters and prime numbers, 5 to 15 characters',
-    password: 'Password must contain Latin letters, prime numbers, from 6 to 11 symbols'
-}
-
 export const rules = {
     login: [
         {required: true, message: 'Please input your login!', whitespace: true},
-        {min: 5, max: 15, message: messages.login},
-        {pattern: patterns.lettersAndNumbers, message: messages.login}],
+        {
+            pattern: /^[A-Za-z0-9]{5,15}$/,
+            message: 'Login must contain Latin letters and prime numbers, 5 to 15 characters'
+        }
+    ],
 
     password: [
         {required: true, message: 'Please input your password!'},
-        {min: 6, max: 11, message: messages.password},
-        {pattern: patterns.lettersAndNumbers, message: messages.password}
+        {
+            pattern: /^[A-Za-z0-9]{6,11}$/,
+            message: 'Password must contain Latin letters, prime numbers, from 6 to 11 symbols'
+        },
     ],
 
     confirmPassword: [
         {required: true, message: 'Please confirm your password!'},
         ({getFieldValue}) => ({
             validator(_, value) {
-                if (!value || getFieldValue('password') === value) {
-                    return Promise.resolve();
-                }
-                return Promise.reject(new Error('The two passwords that you entered do not match!'));
+                return !value || getFieldValue('password') === value ?
+                    Promise.resolve() : Promise.reject(new Error('The two passwords that you entered do not match!'))
             },
         }),
     ],
