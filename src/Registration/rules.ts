@@ -12,8 +12,8 @@ export const rules = {
     password: [
         {required: true, message: 'Please input your password!'},
         {
-            pattern: /^[A-Za-z0-9]{6,11}$/,
-            message: 'Password must contain Latin letters, prime numbers, from 6 to 11 symbols'
+            pattern: /^[A-Za-z0-9]{6,10}$/,
+            message: 'Password must contain Latin letters, prime numbers, from 6 to 10 symbols'
         },
     ],
 
