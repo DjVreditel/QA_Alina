@@ -28,8 +28,8 @@ export const rules = {
     ],
 
     email: [
-        {type: 'email', message: 'Select email address'},
-        {required: true, message: 'Please input your E-mail!'},
+        {type: 'email', message: 'Wrong e-mail!'},
+        {required: true, message: 'Select email address'},
     ],
 
     birthday: [{required: true, message: 'Enter date of birth'},]
