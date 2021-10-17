@@ -36,7 +36,7 @@ const Registration = () => {
                 <Input/>
             </Form.Item>
 
-            <Form.Item name="lastName" label="LastName">
+            <Form.Item name="lastName" label="Last Name">
                 <Input/>
             </Form.Item>
 
